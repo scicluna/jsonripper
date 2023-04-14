@@ -1,9 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { settings, Setting } from './settings';
+import { Setting } from './settings';
 
+//Change output folder to whatever you want
 const outputFolder = path.join(__dirname, '../output');
 
+//Loop over our "settings" and spit out JSON files
 export async function generateJson(settings: Setting[]) {
     if (!fs.existsSync(outputFolder)) fs.mkdirSync(outputFolder)
 
